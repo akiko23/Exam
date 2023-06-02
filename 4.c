@@ -4,21 +4,22 @@
 
 
 int toDecimal(char str[]) {
-  int res = 0;
-  for (int i = strlen(str); i >= 0; i--) {
-    if (str[i] == '1') {
-      res += pow(2, i + 1);
-    }
+  int len = strlen(str);
+  int decimal = 0;
+  for (int i = 0; i < len; i++) {
+      int digit = str[i] - '0';
+      decimal += digit * pow(2, len - i - 1);
   }
-  return res;
+  return decimal;
 }
 
 
 int main() {
-  char st[6] = "101";
+  char st[6] = "1011";
   int res = toDecimal(st);
 
   printf("%d\n", res);
   return 0;
 }
+
 
