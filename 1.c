@@ -9,7 +9,7 @@ struct Coord {
 
 int canGet(struct Coord start, struct Coord finish) {
   int x1 = start.x, y1 = start.y, x2 = finish.x, y2 = finish.y;
-  if ((abs(x1 - x2) == 2 && abs(y2 - y1) == 1) || (abs(x1 - x2) == 1 && abs(y2 - y1) == 2)) {
+  if ((abs(x1 - x2) == abs(y1 - y2)) {
     return 1;
   }
   return 0;
