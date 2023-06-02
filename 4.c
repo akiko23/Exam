@@ -4,7 +4,7 @@
 
 
 int toDecimal(char str[]) {
-  int res = 0, deg = 0;
+  int res = 0;
   for (int i = strlen(str); i >= 0; i--) {
     if (str[i] == '1') {
       res += pow(2, i);
